@@ -1,3 +1,12 @@
+function footerScreen(){
+    alert("foi????????")
+    document.getElementById("footer").style.bottom = "initial";
+}
+
+function footerScreenR(){
+    document.getElementById("footer").style.bottom = "0px";
+}
+
 function erase (){
 
     let tela2 = document.getElementById('answersDivRow');
@@ -9,6 +18,8 @@ function erase (){
     document.getElementById('color').value = "";
 
     tela2.innerHTML = texto2;
+
+    footerScreenR();
 }
 
 function check () {
@@ -30,8 +41,6 @@ function check () {
     let tela = document.getElementById('answersDivRow');
 
     let texto=``;
-
-    console.log(i)
 
     if(i==`` || j==`` || k==`` || l==``){
         texto = `
@@ -60,4 +69,5 @@ function check () {
 
     tela.innerHTML = texto;
 
+    footerScreen();
 }
