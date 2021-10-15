@@ -11,7 +11,7 @@ nav > h1{
 
 body{
     margin: 0px !important;
-    background-color: #ec43c2;
+    background-color: #ff41d0;
 }
 
 hr{
@@ -38,6 +38,8 @@ hr{
     display: flex;
     justify-content: center !important;
     text-align: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .answersDiv{
@@ -45,6 +47,30 @@ hr{
     border-radius: 15px;
     padding: 10px;
 }
+
+.answersBtn{
+    margin-top: 10px;
+}
+
+.errorMsg{
+    border: 2px solid #ff0000;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.errorMsg > p{
+    color: #ff0000;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+/****************************************************************************************************/
 
 @media screen and (min-width:577px) {
 
@@ -60,7 +86,10 @@ select{
 
 .submitDiv > button{
     font-size: 1.5rem;
+}
 
+.answersDiv > p{
+    font-size: 1.5rem;
 }
 
 /********* Fim Main  *********/
@@ -77,5 +106,13 @@ select{
 /***************************************************************************************************/
 
 @media screen and (max-width: 576px) {
+
+select{
+    font-size: 1.4rem;
+}
+
+.answersDiv > p{
+    font-size: 1.5rem;
+}
     
 }

@@ -1,7 +1,20 @@
+function erase (){
+
+    let tela2 = document.getElementById('answersDivRow');
+    let texto2= ``;
+
+    document.getElementById('numero').value = "";
+    document.getElementById('letra').value = "";
+    document.getElementById('caracter').value = "";
+    document.getElementById('color').value = "";
+
+    tela2.innerHTML = texto2;
+}
+
 function check () {
     let numero = ['O Castelo Animado','O Castelo no Céu','O serviço de Entregas da Kiki','Sussurros do Coração','O Mundo dos Pequeninos','Meu Amigo Totoro','O Reino dos Gatos','As Memórias de Marnie','Nausicaa','O Conto da Princesa Kaguya'];
     let letra = ['Donut','Hamburguer','Pizza','Lamen','Sushi','Macarrão','Lasanha','Mexicano','Vegano','Árabe','China'];
-    let caracter = ['água','Coca Cola','Guaraná','Sprite','Suco',];
+    let caracter = ['água','Coca Cola','Guaraná','Sprite','Suco'];
     let cor = ['milkshake','chocolate','cookie','brownie','doce','bolo'];
 
     numero = numero.sort(() => Math.random() - 0.5)
@@ -18,14 +31,33 @@ function check () {
 
     let texto=``;
 
-    texto=`
-            <div class="answersDiv">
-                <p>Filme: ${numero[i]}</p>
-                <p>Comida: ${letra[j]}</p>
-                <p>Bebida: ${caracter[k]}</p>
-                <p>Sobremesa: ${cor[l]}</p>
+    console.log(i)
+
+    if(i==`` || j==`` || k==`` || l==``){
+        texto = `
+            <div class="errorMsg">
+                <p>Escolha uma opção válida</p>
             </div>
+        `;
+
+        tela.innerHTML = texto;
+
+        return;
+    }
+
+    texto=`
+        <div class="answersDiv">
+            <p>Filme: ${numero[i]}</p>
+            <p>Comida: ${letra[j]}</p>
+            <p>Bebida: ${caracter[k]}</p>
+            <p>Sobremesa: ${cor[l]}</p>
+        </div>
+
+        <div class="answersBtn">
+            <button onclick="erase()" id="answersBtn" class="answersBtn">Limpar</button>
+        </div>
     `;
 
     tela.innerHTML = texto;
+
 }
