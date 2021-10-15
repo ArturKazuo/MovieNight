@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <script src="index.js"></script>
+
+    <title>Movie Night</title>
+</head>
+<body>
+
+    <nav>
+        <h1>Movie Night da Soso</h1>
+    </nav>
+
+
+    <main class="container">
+        <div class="row mainDiv">
+            <div class="col-12 col-sm-6 numDiv">
+                <!-- Números/Filme  -->
+                <p>Escolha um número:</p>
+                <select name="numero" id="numero">
+                    <option value=""></option><!--  -->
+                    <option value="0">1</option><!--  -->
+                    <option value="1">2</option><!--  -->
+                    <option value="2">3</option><!--  -->
+                    <option value="3">4</option><!--  -->
+                    <option value="4">5</option><!--  -->
+                    <option value="5">6</option><!--  -->
+                    <option value="6">7</option><!--  -->
+                    <option value="7">8</option><!--  -->
+                    <option value="8">9</option><!--  -->
+                    <option value="9">10</option><!--  -->
+                </select>
+            </div>
+
+            <hr>
+
+            <div class="col-12 col-sm-6 leterDiv">
+                <!-- Letras/Comida  -->
+                <p>Escolha uma letra:</p>
+                <select name="letra" id="letra">
+                    <option value=""></option><!--  -->
+                    <option value="0">A</option><!--  -->
+                    <option value="1">B</option><!--  -->
+                    <option value="2">C</option><!--  -->
+                    <option value="3">D</option><!--  -->
+                    <option value="4">E</option><!--  -->
+                    <option value="5">F</option><!--  -->
+                    <option value="6">G</option><!--  -->
+                    <option value="7">H</option><!--  -->
+                    <option value="8">I</option><!--  -->
+                    <option value="9">J</option><!--  -->
+                    <option value="10">K</option><!--  -->
+                </select>
+            </div>
+
+            <hr>
+        
+            <div class="col-12 col-sm-6 caracterDiv">
+                <!-- Caractéres/Bebida  -->
+                <p>Escolha um caracter:</p>
+                <select name="caracter" id="caracter">
+                    <option value=""></option><!--  -->
+                    <option value="0">@</option><!--  -->
+                    <option value="1">#</option><!--  -->
+                    <option value="2">$</option><!--  -->
+                    <option value="3">%</option><!--  -->
+                    <option value="4">(</option><!--  -->
+                    <option value="5">-</option><!--  -->
+                    <option value="6">&</option><!--  -->
+                    <option value="7">!</option><!--  -->
+                    <option value="8">?</option><!--  -->
+                </select>
+    
+            </div>
+
+            <hr>
+            
+            <div class="col-12 col-sm-6 colorDiv">
+                <!-- Cor/Sobremesa  -->
+                <p>Escolha uma cor:</p>
+                <select name="color" id="color">
+                    <option value=""></option>
+                    <option value="0">Azul</option><!-- Cookie -->
+                    <option value="1">Verde</option><!-- Chocolate -->
+                    <option value="2">Vermelho</option><!-- Bolo -->
+                    <option value="3">Amarelo</option><!--  -->
+                    <option value="4">Rosa</option><!--  -->
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                
+            </div>
+
+            <hr>
+
+            <div class="col-12 col-sm-6 submitDiv">
+                <a href="#answersDivRow"><button onclick="check()" class="btn" id="btn">Confirmar</button></a>
+            </div>
+        
+        </div>
+
+        <div class="row answersDivRow" id="answersDivRow">
+            
+        </div>
+
+    </main>
+
+
+
+    <footer>
+        
+    </footer>
+
+    
+</body>
+</html>
