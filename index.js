@@ -1,5 +1,4 @@
 function footerScreen(){
-    alert("foi????????")
     document.getElementById("footer").style.bottom = "initial";
 }
 
