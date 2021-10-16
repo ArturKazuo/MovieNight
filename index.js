@@ -1,9 +1,9 @@
 function footerScreen(){
-    document.getElementById("footer").style.bottom = "initial";
+    document.getElementById("footer").style.position = "initial";
 }
 
 function footerScreenR(){
-    document.getElementById("footer").style.bottom = "0px";
+    document.getElementById("footer").style.position = "absolute";
 }
 
 function erase (){
@@ -22,7 +22,7 @@ function erase (){
 }
 
 function check () {
-    let numero = ['O Castelo Animado','O Castelo no Céu','O serviço de Entregas da Kiki','Sussurros do Coração','O Mundo dos Pequeninos','Meu Amigo Totoro','O Reino dos Gatos','As Memórias de Marnie','Nausicaa','O Conto da Princesa Kaguya'];
+    let numero = ['O Castelo Animado','O Castelo no Céu','O serviço de Entregas da Kiki','Sussurros do Coração','O Mundo dos Pequeninos','Meu Amigo Totoro','O Reino dos Gatos','As Memórias de Marnie','Nausicaa','O Conto da Princesa Kaguya','Shutter Island'];
     let letra = ['Donut','Hamburguer','Pizza','Lamen','Sushi','Macarrão','Lasanha','Mexicano','Vegano','Árabe','China'];
     let caracter = ['água','Coca Cola','Guaraná','Sprite','Suco'];
     let cor = ['milkshake','chocolate','cookie','brownie','doce','bolo'];
@@ -49,6 +49,8 @@ function check () {
         `;
 
         tela.innerHTML = texto;
+
+        footerScreen();
 
         return;
     }
