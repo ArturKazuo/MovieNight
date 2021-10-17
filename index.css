@@ -127,5 +127,9 @@ select{
 .answersDiv > p{
     font-size: 1.5rem;
 }
+
+.APIs > p{
+    text-align: center;
+}
     
 }
