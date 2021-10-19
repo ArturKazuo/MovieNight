@@ -48,10 +48,32 @@
         <div class="row catsRow">
             <div class="prevtext">
                 <h3>3.</h3>
-                <p>Veja alguns fatos aleatórios sobre gatos. (A resposta pode demorar um poquito pra aparecer, tenha paciência, você já ta sem fazer nada mesmo)</p>
+                <p #>Veja alguns fatos aleatórios sobre gatos. (A resposta pode demorar um poquito pra aparecer, tenha paciência, você já ta sem fazer nada mesmo)</p>
                 <button onclick="cats()">+ fatos sobre gatos</button>
             </div>
             <div id="catsRow">
+                
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row jokeRow">
+            <div class="prevtext">
+                <h3>7.</h3>
+                <p>Clique no botão e receba um piada da categoria que desejar.</p>
+                <select name="joke" id="typeChoice">
+                    <option value=""></option>
+                    <option value="Any">Aleatória</option>
+                    <option value="Programming">Programação</option>
+                    <option value="Dark">Humor negro</option>
+                    <option value="Pun">Piadoca</option>
+                    <option value="Spooky">Halloween</option>
+                    <option value="Christmas">Natalina</option>
+                </select>
+                <a href="#jokeSpan"><button onclick="joke()">adivinhar</button></a>
+            </div>
+            <div id="jokeRow">
                 
             </div>
         </div>
@@ -97,12 +119,13 @@
                 
             </div>
         </div>
+
     </main> 
 
 
 
     <footer>
-
+        <p>Made by Tutu - 2021</p>
     </footer>
 
 </body>

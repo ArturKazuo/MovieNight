@@ -150,3 +150,56 @@ function nation(){
     xhr.open ('GET', `https://api.nationalize.io?name=${nome}`);
     xhr.send ();
 }
+
+/*****************************************************************************************************/
+
+function jokeResponse(){
+    let joke = JSON.parse(this.responseText);
+    let telaJoke = document.getElementById('jokeRow');
+
+    let textoJoke = '';
+
+    if(joke.type == `single`){
+        textoJoke = `
+        <div class="jokeResponseDiv">
+            <p>${joke.joke}</p>
+        </div>
+        `;
+    }
+    if(joke.type == `twopart`){
+        textoJoke = `
+        <div class="jokeResponseDiv">
+            <p>${joke.setup}</p>
+            <p>${joke.delivery}</p>
+        </div>
+        `;
+    }
+
+    telaJoke.innerHTML = textoJoke;
+}
+
+function joke(){
+
+    let type = document.getElementById('typeChoice').value;
+
+    if(type==``){
+
+        let texto='';
+        let tela = document.getElementById('jokeRow')
+
+        texto = `
+            <div class="errorMsg">
+                <p>Escolha uma opção válida</p>
+            </div>
+        `;
+
+        tela.innerHTML = texto;
+
+        return;
+    }
+
+    let xhr = new XMLHttpRequest ();
+    xhr.onload = jokeResponse;
+    xhr.open ('GET', `https://v2.jokeapi.dev/joke/${type}?blacklistFlags=racist,sexist`);
+    xhr.send ();
+}
