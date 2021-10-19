@@ -1,10 +1,10 @@
-function footerScreen(){
+/*function footerScreen(){
     document.getElementById("footer").style.position = "initial";
 }
 
 function footerScreenR(){
     document.getElementById("footer").style.position = "absolute";
-}
+}*/
 
 function erase (){
 
@@ -18,7 +18,6 @@ function erase (){
 
     tela2.innerHTML = texto2;
 
-    footerScreenR();
 }
 
 function check () {
@@ -50,8 +49,6 @@ function check () {
 
         tela.innerHTML = texto;
 
-        footerScreen();
-
         return;
     }
 
@@ -69,6 +66,4 @@ function check () {
     `;
 
     tela.innerHTML = texto;
-
-    footerScreen();
 }
