@@ -56,6 +56,28 @@ hr{
     padding: 10px;
 }
 
+select{
+    border-radius: 5px;
+}
+
+.btn{
+    border-radius: 20px;
+    transition: 0.3s;
+    border: 0;
+    font-size: inherit;
+    padding: 2px 7px 2px 7px;
+}
+
+.btn:hover{
+    box-shadow: 0 6px 14px 2px rgb(0 0 0 / 24%), 0 17px 50px 10px rgb(0 0 0 / 19%);
+}
+
+.btn:active{
+    transition: 0.15s!important;
+    transform: translateY(4px);
+    box-shadow: 0 2px 14px 2px rgb(0 0 0 / 40%), 0 10px 50px 10px rgb(0 0 0 / 30%);
+}
+
 .answersBtn{
     margin-top: 10px;
 }

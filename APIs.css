@@ -36,6 +36,10 @@ main{
     justify-content: center;
 }
 
+.prevtext > p{
+    text-align: center;
+}
+
 hr{
     width: 90%;
 }
@@ -58,12 +62,12 @@ hr{
     text-align: center;
 }
 
-#jokeRow{
+#jokeRow, #cocktailRow{
     display: flex;
     justify-content: center;
 }
 
-#typeChoice, input{
+#typeChoice, #cocktailChoiceSelect, input{
     margin-bottom: 10px;
 }
 

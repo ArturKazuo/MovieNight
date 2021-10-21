@@ -71,7 +71,7 @@
                     <option value="Spooky">Halloween</option>
                     <option value="Christmas">Natalina</option>
                 </select>
-                <a href="#jokeSpan"><button onclick="joke()">adivinhar</button></a>
+                <a href="#jokeSpan"><button onclick="joke()">+ piada</button></a>
             </div>
             <div id="jokeRow">
                 
@@ -80,9 +80,35 @@
 
         <hr>
 
-        <div class="row ageRow">
+        <div class="row cocktailRow">
             <div class="prevtext">
                 <h3>5.</h3>
+                <p>Aperte o botão e receba uma sugestão de drink aleatório para fazer ou filtre pelo tipo de ingrediente que deseja.</p>
+                <select class="cocktailChoiceSelect" name="cocktail" id="cocktailChoiceSelect">
+                    <option value=""></option>
+                    <option value="any">Aleatório</option>
+                    <option value="Tequila">Tequila</option>
+                    <option value="Gin">Gin</option>
+                    <option value="Vodka">Vodka</option>
+                    <option value="Whiskey">Whiskey</option>
+                    <option value="Tea">Chá</option>
+                    <option value="Strawberries">Morango</option>
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Coffee">Café</option>
+                </select>
+
+                <button onclick="cocktail()">+ drink</button>
+            </div>
+            <div id="cocktailRow">
+                
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row ageRow">
+            <div class="prevtext">
+                <h3>6.</h3>
                 <p>Escreva o seu nome e o site tentará adivinhar a sua idade:</p>
             <input type="text" placeholder="Nome" id="nameInput">
                 <button onclick="age()">adivinhar</button>
@@ -96,7 +122,7 @@
 
         <div class="row genderRow">
             <div class="prevtext">
-                <h3>6.</h3>
+                <h3>7.</h3>
                 <p>Digite o seu nome que o site tentará adivinhar o seu sexo biológico:</p>
                 <input type="text" placeholder="Nome" id="nameInput2">
                 <button onclick="gender()">adivinhar</button>
@@ -110,7 +136,7 @@
 
         <div class="row nationRow">
             <div class="prevtext">
-                <h3>7.</h3>
+                <h3>8.</h3>
                 <p>Digite o seu nome e o site tentará adivinhar sua nacionalidade:</p>
                 <input type="text" placeholder="Nome" id="nameInput3">
                 <button onclick="nation()">adivinhar</button>

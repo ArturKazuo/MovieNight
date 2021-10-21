@@ -203,3 +203,83 @@ function joke(){
     xhr.open ('GET', `https://v2.jokeapi.dev/joke/${type}?blacklistFlags=racist,sexist`);
     xhr.send ();
 }
+
+/******************************************************************************************************/
+
+function cocktailResponse(){
+    let cocktailResponse = JSON.parse(this.responseText);
+    let telaCocktail = document.getElementById('cocktailRow');
+    let textoCocktail = '';
+    let numResponses = cocktailResponse.drinks.length;
+
+    if(numResponses == 1){
+        textoCocktail = `
+            <p>Drink: ${cocktailResponse.drinks[0].strDrink}</p>
+        `;
+    }
+
+    if(numResponses > 1){
+        let randomDrink = Math.floor(Math.random() * numResponses + 1);
+
+        textoCocktail = `
+            <p>Drink: ${cocktailResponse.drinks[randomDrink].strDrink}</p>
+        `;
+    }
+
+    telaCocktail.innerHTML = textoCocktail;
+}
+
+function cocktail(){
+    let cocktailChoiceSelect = document.getElementById('cocktailChoiceSelect').value;
+
+    if(cocktailChoiceSelect==``){
+
+        let texto='';
+        let tela = document.getElementById('cocktailRow');
+
+        texto = `
+            <div class="errorMsg">
+                <p>Escolha uma opção válida</p>
+            </div>
+        `;
+
+        tela.innerHTML = texto;
+
+        return;
+    }
+
+    if(cocktailChoiceSelect == 'any'){
+        let xhr = new XMLHttpRequest ();
+        xhr.onload = cocktailResponse;
+        xhr.open('GET',`https://www.thecocktaildb.com/api/json/v1/1/random.php`);
+        xhr.send();
+    }
+    if(cocktailChoiceSelect != 'any'){
+        let xhr = new XMLHttpRequest ();
+        xhr.onload = cocktailResponse;
+        xhr.open('GET',`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${cocktailChoiceSelect}`);
+        xhr.send();
+    }
+
+}
+
+/******************************************************************************************************************************************************************/
+
+/*function love(){
+    const data = null;
+
+    const xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            console.log(this.responseText);
+        }
+    });
+
+    xhr.open("GET", "https://love-calculator.p.rapidapi.com/getPercentage?sname=Alice&fname=John");
+    xhr.setRequestHeader("x-rapidapi-host", "love-calculator.p.rapidapi.com");
+    xhr.setRequestHeader("x-rapidapi-key", "1e7a7addecmsh266ab56bb95b3aep157e7ejsn9590ae911176");
+
+    xhr.send(data);
+}*/
