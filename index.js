@@ -61,7 +61,7 @@ function check () {
         </div>
 
         <div class="answersBtn">
-            <button onclick="erase()" id="answersBtn" class="answersBtn">Limpar</button>
+            <button onclick="erase()" id="answersBtn" class="btn">Limpar</button>
         </div>
     `;
 
