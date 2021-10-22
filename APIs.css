@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-h1,h2,h3,h4,h5,p,a, button, span{
+h1,h2,h3,h4,h5,p,a, button, span, input, select{
     font-family: 'Poppins', sans-serif !important;
 }
 
@@ -58,7 +58,7 @@ hr{
     max-width: 100%;
 }
 
-#catsRow, #ageRow, #genderRow, #nationRow, #jokeRow{
+#catsRow, #ageRow, #genderRow, #nationRow, #jokeRow, #loveRow{
     text-align: center;
 }
 
@@ -73,6 +73,35 @@ hr{
 
 select{
     font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+input{
+    font-size: 1.0rem;
+    border-radius: 5px;
+    border: 0 solid grey!important;
+}
+
+input.class:focus-visible{
+    border: 0 solid grey!important;
+}
+
+.btn{
+    border-radius: 20px;
+    transition: 0.2s;
+    border: 0;
+    font-size: inherit;
+    padding: 2px 7px 2px 7px;
+}
+
+.btn:hover{
+    box-shadow: 0 6px 14px 2px rgb(0 0 0 / 24%), 0 17px 50px 10px rgb(0 0 0 / 19%);
+}
+
+.btn:active{
+    transition: 0.15s!important;
+    transform: translateY(4px);
+    box-shadow: 0 2px 14px 2px rgb(0 0 0 / 40%), 0 10px 50px 10px rgb(0 0 0 / 30%);
 }
 
 .errorMsg{

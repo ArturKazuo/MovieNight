@@ -23,7 +23,7 @@
             <div class="prevtext">
                 <h3>1.</h3>
                 <p>Já que está entediada(o), aqui estão algumas sugestões do que fazer. Basta clicar no botão que uma nova sugestão aparecerá. (A resposta pode demorar um poquito pra aparecer, tenha paciência, você já ta sem fazer nada mesmo)</p>
-                <button onclick="bored()">+ sugestões</button>
+                <button class="btn" onclick="bored()">+ sugestões</button>
             </div>
             <div id="boredRow">
 
@@ -36,7 +36,7 @@
             <div class="prevtext">
                 <h3>2.</h3>
                 <p>Veja imagens de doguinhos para alegrar o dia.</p>
-                <button onclick="dogs()">+ Dogs</button>
+                <button class="btn" onclick="dogs()">+ Dogs</button>
             </div>
             <div id="dogsRow">
                 
@@ -49,7 +49,7 @@
             <div class="prevtext">
                 <h3>3.</h3>
                 <p #>Veja alguns fatos aleatórios sobre gatos. (A resposta pode demorar um poquito pra aparecer, tenha paciência, você já ta sem fazer nada mesmo)</p>
-                <button onclick="cats()">+ fatos sobre gatos</button>
+                <button class="btn" onclick="cats()">+ fatos sobre gatos</button>
             </div>
             <div id="catsRow">
                 
@@ -71,7 +71,7 @@
                     <option value="Spooky">Halloween</option>
                     <option value="Christmas">Natalina</option>
                 </select>
-                <a href="#jokeSpan"><button onclick="joke()">+ piada</button></a>
+                <a href="#jokeSpan"><button class="btn" onclick="joke()">+ piada</button></a>
             </div>
             <div id="jokeRow">
                 
@@ -83,7 +83,7 @@
         <div class="row cocktailRow">
             <div class="prevtext">
                 <h3>5.</h3>
-                <p>Aperte o botão e receba uma sugestão de drink aleatório para fazer ou filtre pelo tipo de ingrediente que deseja.</p>
+                <p>Aperte o botão e receba uma sugestão de drink aleatório para fazer ou filtre pelo tipo de ingrediente que deseja. (Espere alguns segundos, caso não receba nenhuma sugestão tente novamente)</p>
                 <select class="cocktailChoiceSelect" name="cocktail" id="cocktailChoiceSelect">
                     <option value=""></option>
                     <option value="any">Aleatório</option>
@@ -97,7 +97,7 @@
                     <option value="Coffee">Café</option>
                 </select>
 
-                <button onclick="cocktail()">+ drink</button>
+                <button class="btn" onclick="cocktail()">+ drink</button>
             </div>
             <div id="cocktailRow">
                 
@@ -106,12 +106,27 @@
 
         <hr>
 
-        <div class="row ageRow">
+        <div class="row loveRow">
             <div class="prevtext">
                 <h3>6.</h3>
+                <p>Escreva o seu nome e o nome da pessoa de quem você gosta e descubra a porcentagem:</p>
+                <input class="class" type="text" placeholder="Seu nome" id="nameInputLove">
+                <input class="class" type="text" placeholder="Nome da outra pessoa" id="nameInputLove2">
+                <button class="btn" onclick="love()">adivinhar</button>
+            </div>
+            <div id="loveRow">
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row ageRow">
+            <div class="prevtext">
+                <h3>7.</h3>
                 <p>Escreva o seu nome e o site tentará adivinhar a sua idade:</p>
             <input type="text" placeholder="Nome" id="nameInput">
-                <button onclick="age()">adivinhar</button>
+                <button class="btn" onclick="age()">adivinhar</button>
             </div>
             <div id="ageRow">
 
@@ -122,10 +137,10 @@
 
         <div class="row genderRow">
             <div class="prevtext">
-                <h3>7.</h3>
+                <h3>8.</h3>
                 <p>Digite o seu nome que o site tentará adivinhar o seu sexo biológico:</p>
                 <input type="text" placeholder="Nome" id="nameInput2">
-                <button onclick="gender()">adivinhar</button>
+                <button class="btn" onclick="gender()">adivinhar</button>
             </div>
             <div id="genderRow">
 
@@ -136,10 +151,10 @@
 
         <div class="row nationRow">
             <div class="prevtext">
-                <h3>8.</h3>
+                <h3>9.</h3>
                 <p>Digite o seu nome e o site tentará adivinhar sua nacionalidade:</p>
                 <input type="text" placeholder="Nome" id="nameInput3">
-                <button onclick="nation()">adivinhar</button>
+                <button class="btn" onclick="nation()">adivinhar</button>
             </div>
             <div id="nationRow">
                 

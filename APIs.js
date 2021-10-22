@@ -265,21 +265,47 @@ function cocktail(){
 
 /******************************************************************************************************************************************************************/
 
-/*function love(){
+function loveResponse(){
+    let porcentagem = JSON.parse(this.responseText);
+    let telaLove = document.getElementById('loveRow');
+    let textoLove = '';
+    
+    textoLove = `
+        <p>Porcentagem: ${porcentagem.percentage}%</p>
+        <p>Comentário: ${porcentagem.result}</p>
+    `;
+
+    telaLove.innerHTML = textoLove;
+}
+
+function love(){
     const data = null;
+
+    let seuNome = document.getElementById('nameInputLove').value;
+    let otherNome = document.getElementById('nameInputLove2').value;
+
+    if(seuNome == '' || otherNome == '' || (seuNome == '' & otherNome == '')){
+        let texto='';
+        let tela = document.getElementById('loveRow');
+
+        texto = `
+            <div class="errorMsg">
+                <p>Escolha uma opção válida</p>
+            </div>
+        `;
+
+        tela.innerHTML = texto;
+
+        return;
+    }
 
     const xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
 
-    xhr.addEventListener("readystatechange", function () {
-        if (this.readyState === this.DONE) {
-            console.log(this.responseText);
-        }
-    });
-
-    xhr.open("GET", "https://love-calculator.p.rapidapi.com/getPercentage?sname=Alice&fname=John");
+    xhr.open("GET", `https://love-calculator.p.rapidapi.com/getPercentage?sname=${seuNome}&fname=${otherNome}`);
+    xhr.onload = loveResponse;
     xhr.setRequestHeader("x-rapidapi-host", "love-calculator.p.rapidapi.com");
     xhr.setRequestHeader("x-rapidapi-key", "1e7a7addecmsh266ab56bb95b3aep157e7ejsn9590ae911176");
 
     xhr.send(data);
-}*/
+}
