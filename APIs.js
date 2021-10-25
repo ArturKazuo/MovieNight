@@ -271,8 +271,10 @@ function loveResponse(){
     let textoLove = '';
     
     textoLove = `
-        <p>Porcentagem: ${porcentagem.percentage}%</p>
-        <p>Comentário: ${porcentagem.result}</p>
+        <div>
+            <p>Porcentagem: ${porcentagem.percentage}%</p>
+            <p>Comentário: ${porcentagem.result}</p>
+        </div> 
     `;
 
     telaLove.innerHTML = textoLove;
@@ -309,3 +311,6 @@ function love(){
 
     xhr.send(data);
 }
+
+/***********************************************************************************************************************************************************/
+

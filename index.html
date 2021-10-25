@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="https://kit.fontawesome.com/0cc1b7e656.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="index.css" type="text/css">
     <script src="index.js"></script>
 
@@ -16,8 +18,24 @@
         <h1>Movie Night da Soso</h1>
     </nav>
 
+    
 
     <main class="container">
+
+        <div class="modeMenu">
+            <input type="checkbox" id="backgroundModes">
+            <label class="labelModes" for="backgroundModes">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times-circle"></i>
+            </label>
+            <ul class="modeColors" id="ulColors">
+                <a href="#"><li onclick="dark()" id="1">Dark Mode</li></a>
+                <a href="#"><li onclick="rainbow()" id="2">Rainbow Mode</li></a>
+                <a href="#"><li onclick="light()" id="3">Light Mode</li></a>
+                <a href="#"><li onclick="sophia()" id="4">Sophia Mode</li></a>
+            </ul>
+        </div>
+
         <div class="row mainDiv">
             <div class="col-12 col-sm-6 numDiv">
                 <!-- Números/Filme  -->

@@ -62,7 +62,7 @@ hr{
     text-align: center;
 }
 
-#jokeRow, #cocktailRow{
+#jokeRow, #cocktailRow, #loveRow{
     display: flex;
     justify-content: center;
 }
