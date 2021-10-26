@@ -80,7 +80,7 @@ function dark(){
 
     document.getElementById('btn').style.border="0";
     
-    let css = '.modeColors li:hover{background-color: #a8a8a8;} hr{border-color: hsla(0,0%,100%,0.87);}';
+    let css = '.modeColors li:hover{background-color: #a8a8a8;} hr{border-color: hsla(0,0%,100%,0.87);} #backgroundModes:checked ~ .modeColors{box-shadow: 0 1.5px hsla(0,0%,100%,0.87);}';
     let style = document.createElement('style');
 
     if (style.styleSheet) {
@@ -102,7 +102,7 @@ function rainbow(){
 
     document.getElementById('btn').style.border="0";
     
-    let css = '.modeColors li:hover{background-color: #a8a8a8;} hr{border-color: black;}';
+    let css = '.modeColors li:hover{background-color: #a8a8a8;} hr{border-color: black;} #backgroundModes:checked ~ .modeColors{box-shadow: 0 1.5px black;}';
     let style = document.createElement('style');
 
     if (style.styleSheet) {
@@ -124,7 +124,7 @@ function light(){
 
     document.getElementById('btn').style.border="1px solid black";
 
-    let css = '.modeColors li:hover{background-color: #a8a8a8;} hr{border-color: black;}';
+    let css = '.modeColors li:hover{background-color: #a8a8a8;} hr{border-color: black;} #backgroundModes:checked ~ .modeColors{box-shadow: 0 1.5px black;}';
     let style = document.createElement('style');
 
     if (style.styleSheet) {
@@ -146,7 +146,7 @@ function sophia(){
 
     document.getElementById('btn').style.border="0";
 
-    let css = '.modeColors li:hover{background-color: #ff6bda;} hr{border-color: black;}';
+    let css = '.modeColors li:hover{background-color: #ff6bda;} hr{border-color: black;} #backgroundModes:checked ~ .modeColors{box-shadow: 0 1.5px black;}';
     let style = document.createElement('style');
 
     if (style.styleSheet) {
